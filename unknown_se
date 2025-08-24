@@ -16,7 +16,8 @@ n = length(y) ## sample size
 # p ## dimension of the covariate vector
 
 #G ## indicator: G == 1, unknown sensitivity (alpha.1); G == 0 known sensitivity (alpha.2)
-### for example: study == 1 has has unknown sensitivity, while other study != 1 have known sensitivity: you can set G <- ifelse(study==1,1,0)
+### for example: study == 1 has has unknown sensitivity, while other study != 1 have known sensitivity, then you can set 
+#G <- ifelse(study==1,1,0)
 
 #alpha.2 ## known sensitivity 
 #beta ## known specificity 
