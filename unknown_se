@@ -209,7 +209,7 @@ print(c('alpha1=',alpha.1))
 print(c('se.theta.alpha1=',se.theta.alpha))
 
 end.time <- Sys.time()
-duration <- difftime(end.time, start.time,units = "mins")
+duration <- difftime(end.time, start.time,units = "secs")
 duration
 
 
