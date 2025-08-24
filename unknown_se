@@ -4,7 +4,7 @@ library(dlm)
 library(stats)
 library(MASS)
 library(coda)
-source("MIspline.R") ## call MIspline function in the MIsplines.r file
+source("MIspline.R") ## call MIspline function in the MIsplines.R file
 
 start.time <- Sys.time()
 
@@ -26,7 +26,7 @@ tau = 1 # for PO model
 theta = runif(p,-1,1) 
 alpha.1 = runif(1,0.5,1)
 
-#############splines
+############# splines
 #### setup knots and degree
 minobs = min(c)
 maxobs = max(c)+.2
@@ -38,7 +38,7 @@ bis = MIspline(t(c),order,knots)[[2]] # report each b_l(c_i) [1:L,1:n]
 rr = 1:L 
 rp = 1:p
 
-##########initial gamma_l
+########## initial gamma_l
 gam <- matrix(runif(L,0,1),nrow=1,ncol=L)
 
 ###############################################
