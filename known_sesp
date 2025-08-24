@@ -12,7 +12,7 @@ start.time <- Sys.time()
 #c ## observation time, n by 1
 #X ## covariate matrix, n by p
 #y ## test result, 1 for positive, 0 for negative
-#alpha ## sensitivity 
+#alpha ## sensitivity
 #beta ## specificity 
 n = length(y) ## sample size
 # p ## dimension of the covariate vector
