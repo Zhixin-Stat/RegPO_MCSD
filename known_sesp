@@ -33,7 +33,8 @@ rr = 1:L
 rp = 1:p
 
 ########## initial gamma_l
-gam <- matrix(rep(1,L),nrow=1,ncol=L)
+# gam <- matrix(rep(1,L),nrow=1,ncol=L)
+gam <- matrix(runif(L,0,1),nrow=1,ncol=L)
 
 ###############################################
 ## Loading the functions
