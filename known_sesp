@@ -40,7 +40,7 @@ gam <- matrix(runif(L,0,1),nrow=1,ncol=L)
 ## Loading the functions
 
 ## update covariate params: theta
-fun_theta <- function(theta,EZ,bis,EZl,Exi,X){
+fun_theta<- function(theta,EZ,bis,EZl,Exi,X){
   gal <- matrix(0,nrow =1,ncol = L)
   for (l in 1:L){
     gal[l] <- sum(EZl[,l])/sum(Exi*bis[l,]*exp(X%*%theta))
@@ -96,7 +96,7 @@ while (max(err_theta,rerr_lobs)> 1e-4){
 }
 
 ## standard error estimate for theta
-fun_setheta <- function(theta,gam,bis,X,y,alpha,beta){
+fun_setheta<- function(theta,gam,bis,X,y,alpha,beta){
   Lambdac = t(gam%*%bis)
   ka = alpha+beta-1
   colnames(X) <- NULL
