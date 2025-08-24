@@ -1,5 +1,5 @@
 # MisCurrentPO
-R codes for paper "Regression analysis of  misclassified current status data with potentially unknown test accuracy".
+R codes for paper "Regression analysis of  misclassified current status data with potentially unknown test accuracy":
 
 file: MIspline.R can be saved in a separate R file and then call it in main code by source("MIspline.R")
 
