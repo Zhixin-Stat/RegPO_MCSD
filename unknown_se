@@ -9,7 +9,7 @@ source("MIspline.R") ## call MIspline function in the MIsplines.R file
 start.time <- Sys.time()
 
 ### specify the following parameters (example code: subgroup has unknown sensitivity, while specificity are known across all the subgroups)
-#c ## observation time, n by 1)
+#c ## observation time, n by 1
 #X ## covariate matrix, n by p
 #y ## test result, 1 for positive, 0 for negative
 n = length(y) ## sample size
