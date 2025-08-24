@@ -128,6 +128,6 @@ print(c('theta=',theta))
 print(c('se.theta=',se.theta))
 
 end.time <- Sys.time()
-duration <- difftime(end.time, start.time,units = "mins")
+duration <- difftime(end.time, start.time,units = "secs")
 
 
