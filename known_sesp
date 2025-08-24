@@ -20,7 +20,7 @@ n = length(y) ## sample size
 ###################### initial theta, gamma_l (method robust to initial values)
 theta = runif(p,-1,1) 
 
-#############splines
+############# splines
 #### setup knots and degree
 minobs = min(c)
 maxobs = max(c)+.2
@@ -32,7 +32,7 @@ bis = MIspline(t(c),order,knots)[[2]] # report each b_l(c_i) [1:L,1:n]
 rr = 1:L 
 rp = 1:p
 
-##########initial gamma_l
+########## initial gamma_l
 gam <- matrix(rep(1,L),nrow=1,ncol=L)
 
 ###############################################
