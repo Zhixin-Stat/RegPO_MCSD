@@ -148,6 +148,7 @@ while (max(err_theta,rerr_lobs)> 1e-4){
   print(list(err=c(err_theta,rerr_lobs)))
 }  
 
+############## calculate standard error for theta and unknown alpha.1
 ka.1 = alpha.1+beta-1 # G == 1
 ka1.tau = ka.1*tau^(tau+1)
 ka.2 = alpha.2+beta-1  # G == 0
