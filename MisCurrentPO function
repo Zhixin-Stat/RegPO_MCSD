@@ -500,3 +500,12 @@ MisCurrentPO <- function(X,y,c,alpha,beta){
   }
 
 }
+
+####### application example:
+# MisCurrentPO(X=X,y=y,c=c,alpha=0.95,beta=0.9) ## will report covariates: theta and standard error (se): se.theta;
+# MisCurrentPO(X=X,y=y,c=c,alpha=0.95,beta=FALSE) ## will report covariates: theta, specificity (beta), se.theta, and se.beta;
+# MisCurrentPO(X=X,y=y,c=c,alpha=FALSE,beta=0.95) ## will report covariates: theta, sensitivity (alpha), se.theta, and se.alpha;
+# MisCurrentPO(X=X,y=y,c=c,alpha=FALSE,beta=FALSE) ## will report covariates: theta,sensitivity (alpha), specificity (beta), se.theta, se.alpha, and se.beta;
+
+
+
