@@ -1,7 +1,11 @@
 # MisCurrentPO
 R codes for paper "Regression analysis of  misclassified current status data with potentially unknown test accuracy":
 
-file: MIspline.R can be saved in a separate R file and then call it in main code by source("MIspline.R")
+file: MisCrrentPO_function is the main user-friendly function. By setting sensitivity (alpha) = FALSE or a known number, specificity (beta) = FALSE or a known number, it can directly return you the covariate estimates (theta), their standard error (se.theta), and alpha and/or beta estimates with se.alpha and/or se.beta when either one or both are set to FALSE.  
+
+Below codes are clean version for developer,if you are interested in reporducing the results:
+
+file: MIspline.R can be saved in a separate R file and then call it in below two files by source("MIspline.R")
 
 file: known_sesp, main code for the case that data have known sensitivity and specificity. This code is used for data simulation section. 
 
