@@ -1,4 +1,4 @@
-MisCurrentPO <- function(X,y,c,alpha,beta){
+MisCurrentPO <- function(X,y,c,alpha=1,beta=1,m.knots=6){
   #c ## observation time, n by 1
   #X ## covariate matrix, n by p
   #y ## test result, 1 for positive, 0 for negative
@@ -8,7 +8,9 @@ MisCurrentPO <- function(X,y,c,alpha,beta){
   p = ncol(X) ## dimension of the covariate vector
 
   tau =1 ### for PO model
-  
+
+  m= m.knots ###specify m equally spaced knots, robust to m
+
   ##################### loading library
   library(dlm)
   library(stats)
@@ -114,7 +116,6 @@ MisCurrentPO <- function(X,y,c,alpha,beta){
   #### setup knots and degree
   minobs = min(c)
   maxobs = max(c)+.2
-  m = 6 ### specify m equally spaced, robust to m
   knots = seq(minobs,maxobs,length.out=m)
   order = 3
   L = length(knots)-2+order # the number of Ispline bases 
