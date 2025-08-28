@@ -4,7 +4,7 @@ R codes for paper "Regression analysis of  misclassified current status data wit
 file: MisCrrentPO_function is the main user-friendly function. By providing interested current status data with covariates X, test result y, obeservation time c, and setting sensitivity (alpha) = FALSE or a known number, specificity (beta) = FALSE or a known number, it can directly return you the covariate estimates (theta), their corresponding standard error (se.theta), and alpha and/or beta estimates with se.alpha and/or se.beta when either one or both are set to FALSE.  
 
 
-Below codes are clean version for developer,if you are interested in reporducing the results:
+Below codes are clean versions for developer, if you are interested in reporducing the results:
 
 file: MIspline.R can be saved in a separate R file and then call it in below two files by source("MIspline.R")
 
