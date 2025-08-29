@@ -1,4 +1,4 @@
-MisCurrentPO <- function(X,y,c,alpha=1,beta=1,m.knots=6){
+RegPO_MCSD <- function(X,y,c,alpha=1,beta=1,m.knots=6){
   #c ## observation time, n by 1
   #X ## covariate matrix, n by p
   #y ## test result, 1 for positive, 0 for negative
@@ -503,10 +503,10 @@ MisCurrentPO <- function(X,y,c,alpha=1,beta=1,m.knots=6){
 }
 
 ####### application example:
-# MisCurrentPO(X=X,y=y,c=c,alpha=0.95,beta=0.9) ## will report covariates: theta and standard error (se): se.theta;
-# MisCurrentPO(X=X,y=y,c=c,alpha=0.95,beta=FALSE) ## will report covariates: theta, specificity (beta), se.theta, and se.beta;
-# MisCurrentPO(X=X,y=y,c=c,alpha=FALSE,beta=0.95) ## will report covariates: theta, sensitivity (alpha), se.theta, and se.alpha;
-# MisCurrentPO(X=X,y=y,c=c,alpha=FALSE,beta=FALSE) ## will report covariates: theta,sensitivity (alpha), specificity (beta), se.theta, se.alpha, and se.beta;
+# RegPO_MCSD(X=X,y=y,c=c,alpha=0.95,beta=0.9) ## will report covariates: theta and standard error (se): se.theta;
+# RegPO_MCSD(X=X,y=y,c=c,alpha=0.95,beta=FALSE) ## will report covariates: theta, specificity (beta), se.theta, and se.beta;
+# RegPO_MCSD(X=X,y=y,c=c,alpha=FALSE,beta=0.95) ## will report covariates: theta, sensitivity (alpha), se.theta, and se.alpha;
+# RegPO_MCSD(X=X,y=y,c=c,alpha=FALSE,beta=FALSE) ## will report covariates: theta,sensitivity (alpha), specificity (beta), se.theta, se.alpha, and se.beta;
 
 
 
