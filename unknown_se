@@ -125,19 +125,16 @@ while (max(err_theta,rerr_lobs)> 1e-4){
   SCX = (tau/(tau+K))^tau
   
   lobs.1=matrix(0,nrow = n,ncol = 1)
-  lobs.0=matrix(0,nrow = n,ncol = 1)
   for (i in 1:n){
     if (G[i]==0){
       lobs.1[i] = alpha.2- (alpha.2+beta-1)*SCX[i]
-      lobs.0[i] = 1-lobs.1
     }
     
     else{
       lobs.1[i] = alpha.1- (alpha.1+beta-1)*SCX[i]
-      lobs.0[i] = 1-lobs.1
     }
   }
-  
+  lobs.0 = 1-lobs.1
   lobs = sum(log(lobs.1[y==1]))+sum(log(lobs.0[y==0]))
   
   rerr_lobs <- abs((lobs -lobs.f)/lobs.f)
