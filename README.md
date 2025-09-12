@@ -7,3 +7,5 @@ file: "Data.cvs" includes a simulated data set:
 variable "observed.time" is c, "X1" and "X2" are covariates X, "test.result" is y.
 
 file: example.pdf generated using R Markdown, demonstrates the example analysis outputs obtained when applying the RegPO_MCSD function to Data.csv.
+
+Note: the function will call packages "dlm", "stats", "MASS" and "coda".
