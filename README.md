@@ -6,4 +6,4 @@ file: RegPO_MCSD is the main user-friendly function. By providing interested cur
 file: "Data.cvs" includes a simulated data set:
 variable "observed.time" is c, "X1" and "X2" are covariates X, "test.result" is y.
 
-file: example illustrates the analysis output after applying the RegPO_MCSD function to the Data.cvs.
+file: example.pdf generated using R Markdown, demonstrates the example analysis outputs obtained when applying the RegPO_MCSD function to Data.csv.
