@@ -116,7 +116,7 @@ RegPO_MCSD <- function(X,y,c,alpha=1,beta=1,m.knots=6){
   #### setup knots and degree
   minobs = min(c)
   maxobs = max(c)+.2
-  knots = seq(minobs,maxobs,length.out=m)
+  knots = seq(0,maxobs,length.out=m)
   order = 3
   L = length(knots)-2+order # the number of Ispline bases 
   bis = MIspline(t(c),order,knots)[[2]] # report each b_l(c_i) [1:L,1:n]
@@ -133,7 +133,7 @@ RegPO_MCSD <- function(X,y,c,alpha=1,beta=1,m.knots=6){
   rerr_lobs = 1
   err_alpha = alpha
   err_beta = beta
-  
+  iter = 1
   #Beta is given, estimate alpha
   if (identical(alpha,FALSE) && !identical(beta,FALSE)){
     alpha = runif(1,0.5,1) ##initial alpha
@@ -306,7 +306,7 @@ RegPO_MCSD <- function(X,y,c,alpha=1,beta=1,m.knots=6){
       a8=(nu3-1)/(1-denu)
       
       #empty matrix
-      matC=matrix(0,L+p+2,L+p+2)
+      matC=matrix(0,L+p+1,L+p+1)
       
       for(i in 1:n){
         dl.dtheta=y[i]*a1[i]*X[i,]-(1-y[i])*a2[i]*X[i,]
