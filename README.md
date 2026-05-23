@@ -12,4 +12,4 @@ Note:
 
 1. The function will call packages "dlm", "stats", "MASS" and "coda".
 
-2. The variance estimates of the parameters can also be obtained by inverting the observed information matrix, as described in the paper. The corresponding R code will be made available in the near future or upon request. Additional details comparing the three variance estimation methods the Louis method, the outer product of gradients (OPG) method, and the observed information matrix (OIM) method can be found in Appendix Table C.1 of the paper.
+2. The variance estimates of the parameters can also be obtained by inverting the observed information matrix (OIM), as described in the paper. The corresponding R code will be made available in the near future or upon request. Additional details comparing the three variance estimation methods the Louis method, the OPG method, and the OIM method can be found in Appendix Table C.1 of the paper.
